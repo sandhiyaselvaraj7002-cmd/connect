@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Stories ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Start Screen to enable sound/autoplay on mobile -->
+    <div id="start-screen">
+        <button onclick="startApp()">Open Your Gift 🎁</button>
+    </div>
+
+    <div class="story-container">
+        <!-- Progress Bars -->
+        <div class="progress-container" id="progress-bars">
+            <!-- JavaScript will generate bars here based on the number of videos -->
+        </div>
+
+        <div class="story-wrapper">
+            <!-- MANUALLY ADD YOUR VIDEOS HERE -->
+            <!-- Video 1 -->
+            <video id="vid-0" class="story-vid" playsinline preload="auto">
+                <source src="mAst_vvcvideo_1778732117619.mp4" type="video/mp4">
+            </video>
+
+            <!-- Video 2 -->
+            <video id="vid-1" class="story-vid hidden" playsinline preload="auto">
+                <source src="mAst_vvcvideo_1778732332072.mp4" type="video/mp4">
+            </video>
+
+            <!-- Video 3 -->
+            <video id="vid-2" class="story-vid hidden" playsinline preload="auto">
+                <source src="mAst_vvcvideo_1778732592300.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Text Overlays -->
+            <div class="story-overlay">
+                <h2 id="story-title"></h2>
+                <p id="story-caption"></p>
+            </div>
+        </div>
+
+        <!-- Touch Zones for Navigation -->
+        <div class="nav-left" onclick="prevStory()"></div>
+        <div class="nav-right" onclick="nextStory()"></div>
+
+        <!-- End Screen -->
+        <div id="final-wish" class="hidden">
+            <h1>Happy Birthday mr poriki 🎂</h1>
+            <p>Every second with you is a treasure.</p>
+            <button onclick="restartStories()">Watch Again 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
